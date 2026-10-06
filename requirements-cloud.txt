@@ -1,0 +1,4 @@
+-c requirements-cloud.constraints.txt
+-r requirements-predict.txt
+gunicorn>=23,<24
+psycopg2-binary>=2.9,<3

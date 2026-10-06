@@ -1,0 +1,675 @@
+{
+  "version": "pilot-2026-10-03-v1",
+  "note": "Bounded title and recorded-model aliases for research. This catalog is not a recommendation, a specification database or an accuracy claim. Unsupported models and attributes remain unknown; inspect hardware codes and offer contents.",
+  "families": [
+    {
+      "id": "phones",
+      "label": "Phones",
+      "product_type": "puhelin",
+      "home": "Elektroniikka ja kodinkoneet",
+      "hints": [
+        "\\b(?:iphone|galaxy|oneplus|pixel|puhelin|smartphone|telefon)\\b"
+      ],
+      "comparison_fields": [
+        "battery_health_pct"
+      ],
+      "models": [
+        {
+          "id": "apple-iphone-11",
+          "brand": "Apple",
+          "label": "iPhone 11",
+          "aliases": [
+            "\\bi\\s*phone\\s*11\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "apple-iphone-11-pro",
+          "brand": "Apple",
+          "label": "iPhone 11 Pro",
+          "aliases": [
+            "\\bi\\s*phone\\s*11\\s*pro\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "apple-iphone-11-pro-max",
+          "brand": "Apple",
+          "label": "iPhone 11 Pro Max",
+          "aliases": [
+            "\\bi\\s*phone\\s*11\\s*pro\\s*max\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "apple-iphone-12",
+          "brand": "Apple",
+          "label": "iPhone 12",
+          "aliases": [
+            "\\bi\\s*phone\\s*12\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "apple-iphone-12-pro",
+          "brand": "Apple",
+          "label": "iPhone 12 Pro",
+          "aliases": [
+            "\\bi\\s*phone\\s*12\\s*pro\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "apple-iphone-12-pro-max",
+          "brand": "Apple",
+          "label": "iPhone 12 Pro Max",
+          "aliases": [
+            "\\bi\\s*phone\\s*12\\s*pro\\s*max\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "apple-iphone-12-mini",
+          "brand": "Apple",
+          "label": "iPhone 12 Mini",
+          "aliases": [
+            "\\bi\\s*phone\\s*12\\s*mini\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "apple-iphone-13",
+          "brand": "Apple",
+          "label": "iPhone 13",
+          "aliases": [
+            "\\bi\\s*phone\\s*13\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "apple-iphone-13-pro",
+          "brand": "Apple",
+          "label": "iPhone 13 Pro",
+          "aliases": [
+            "\\bi\\s*phone\\s*13\\s*pro\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "apple-iphone-13-pro-max",
+          "brand": "Apple",
+          "label": "iPhone 13 Pro Max",
+          "aliases": [
+            "\\bi\\s*phone\\s*13\\s*pro\\s*max\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "apple-iphone-13-mini",
+          "brand": "Apple",
+          "label": "iPhone 13 Mini",
+          "aliases": [
+            "\\bi\\s*phone\\s*13\\s*mini\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "apple-iphone-14",
+          "brand": "Apple",
+          "label": "iPhone 14",
+          "aliases": [
+            "\\bi\\s*phone\\s*14\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "apple-iphone-14-pro",
+          "brand": "Apple",
+          "label": "iPhone 14 Pro",
+          "aliases": [
+            "\\bi\\s*phone\\s*14\\s*pro\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "apple-iphone-14-pro-max",
+          "brand": "Apple",
+          "label": "iPhone 14 Pro Max",
+          "aliases": [
+            "\\bi\\s*phone\\s*14\\s*pro\\s*max\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "apple-iphone-14-plus",
+          "brand": "Apple",
+          "label": "iPhone 14 Plus",
+          "aliases": [
+            "\\bi\\s*phone\\s*14\\s*plus\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "apple-iphone-15",
+          "brand": "Apple",
+          "label": "iPhone 15",
+          "aliases": [
+            "\\bi\\s*phone\\s*15\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "apple-iphone-15-pro",
+          "brand": "Apple",
+          "label": "iPhone 15 Pro",
+          "aliases": [
+            "\\bi\\s*phone\\s*15\\s*pro\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "apple-iphone-15-pro-max",
+          "brand": "Apple",
+          "label": "iPhone 15 Pro Max",
+          "aliases": [
+            "\\bi\\s*phone\\s*15\\s*pro\\s*max\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "apple-iphone-15-plus",
+          "brand": "Apple",
+          "label": "iPhone 15 Plus",
+          "aliases": [
+            "\\bi\\s*phone\\s*15\\s*plus\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "apple-iphone-16",
+          "brand": "Apple",
+          "label": "iPhone 16",
+          "aliases": [
+            "\\bi\\s*phone\\s*16\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "apple-iphone-16-pro",
+          "brand": "Apple",
+          "label": "iPhone 16 Pro",
+          "aliases": [
+            "\\bi\\s*phone\\s*16\\s*pro\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "apple-iphone-16-pro-max",
+          "brand": "Apple",
+          "label": "iPhone 16 Pro Max",
+          "aliases": [
+            "\\bi\\s*phone\\s*16\\s*pro\\s*max\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "apple-iphone-16-plus",
+          "brand": "Apple",
+          "label": "iPhone 16 Plus",
+          "aliases": [
+            "\\bi\\s*phone\\s*16\\s*plus\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "samsung-galaxy-s21",
+          "brand": "Samsung",
+          "label": "Galaxy S21",
+          "aliases": [
+            "\\b(?:samsung\\s+)?galaxy\\s*s\\s*21\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "samsung-galaxy-s21-plus",
+          "brand": "Samsung",
+          "label": "Galaxy S21 Plus",
+          "aliases": [
+            "\\b(?:samsung\\s+)?galaxy\\s*s\\s*21\\s*(?:plus|\\+)(?!\\w)"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "samsung-galaxy-s21-ultra",
+          "brand": "Samsung",
+          "label": "Galaxy S21 Ultra",
+          "aliases": [
+            "\\b(?:samsung\\s+)?galaxy\\s*s\\s*21\\s*(?:ultra)\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "samsung-galaxy-s22",
+          "brand": "Samsung",
+          "label": "Galaxy S22",
+          "aliases": [
+            "\\b(?:samsung\\s+)?galaxy\\s*s\\s*22\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "samsung-galaxy-s22-plus",
+          "brand": "Samsung",
+          "label": "Galaxy S22 Plus",
+          "aliases": [
+            "\\b(?:samsung\\s+)?galaxy\\s*s\\s*22\\s*(?:plus|\\+)(?!\\w)"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "samsung-galaxy-s22-ultra",
+          "brand": "Samsung",
+          "label": "Galaxy S22 Ultra",
+          "aliases": [
+            "\\b(?:samsung\\s+)?galaxy\\s*s\\s*22\\s*(?:ultra)\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "samsung-galaxy-s23",
+          "brand": "Samsung",
+          "label": "Galaxy S23",
+          "aliases": [
+            "\\b(?:samsung\\s+)?galaxy\\s*s\\s*23\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "samsung-galaxy-s23-plus",
+          "brand": "Samsung",
+          "label": "Galaxy S23 Plus",
+          "aliases": [
+            "\\b(?:samsung\\s+)?galaxy\\s*s\\s*23\\s*(?:plus|\\+)(?!\\w)"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "samsung-galaxy-s23-ultra",
+          "brand": "Samsung",
+          "label": "Galaxy S23 Ultra",
+          "aliases": [
+            "\\b(?:samsung\\s+)?galaxy\\s*s\\s*23\\s*(?:ultra)\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "samsung-galaxy-s24",
+          "brand": "Samsung",
+          "label": "Galaxy S24",
+          "aliases": [
+            "\\b(?:samsung\\s+)?galaxy\\s*s\\s*24\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "samsung-galaxy-s24-plus",
+          "brand": "Samsung",
+          "label": "Galaxy S24 Plus",
+          "aliases": [
+            "\\b(?:samsung\\s+)?galaxy\\s*s\\s*24\\s*(?:plus|\\+)(?!\\w)"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "samsung-galaxy-s24-ultra",
+          "brand": "Samsung",
+          "label": "Galaxy S24 Ultra",
+          "aliases": [
+            "\\b(?:samsung\\s+)?galaxy\\s*s\\s*24\\s*(?:ultra)\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        }
+      ]
+    },
+    {
+      "id": "consoles",
+      "label": "Game consoles",
+      "product_type": "pelikonsoli",
+      "home": "Elektroniikka ja kodinkoneet",
+      "hints": [
+        "\\b(?:ps[345]|playstation|xbox|pelikonsoli)\\b",
+        "\\bnintendo\\s+switch\\b"
+      ],
+      "comparison_fields": [],
+      "models": [
+        {
+          "id": "sony-ps4",
+          "brand": "Sony",
+          "label": "PlayStation 4",
+          "aliases": [
+            "\\b(?:play\\s*station\\s*4|ps\\s*4)\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "sony-ps4-slim",
+          "brand": "Sony",
+          "label": "PlayStation 4 Slim",
+          "aliases": [
+            "\\b(?:play\\s*station\\s*4|ps\\s*4)\\s*slim\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "sony-ps4-pro",
+          "brand": "Sony",
+          "label": "PlayStation 4 Pro",
+          "aliases": [
+            "\\b(?:play\\s*station\\s*4|ps\\s*4)\\s*pro\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "sony-ps5",
+          "brand": "Sony",
+          "label": "PlayStation 5",
+          "aliases": [
+            "\\b(?:play\\s*station\\s*5|ps\\s*5)\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code",
+            "edition"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "sony-ps5-slim",
+          "brand": "Sony",
+          "label": "PlayStation 5 Slim",
+          "aliases": [
+            "\\b(?:play\\s*station\\s*5|ps\\s*5)\\s*slim\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code",
+            "edition"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "sony-ps5-pro",
+          "brand": "Sony",
+          "label": "PlayStation 5 Pro",
+          "aliases": [
+            "\\b(?:play\\s*station\\s*5|ps\\s*5)\\s*pro\\b"
+          ],
+          "variant_fields": [
+            "storage",
+            "hardware_code",
+            "edition"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "nintendo-switch",
+          "brand": "Nintendo",
+          "label": "Nintendo Switch",
+          "aliases": [
+            "\\bnintendo\\s*switch\\b"
+          ],
+          "variant_fields": [
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "nintendo-switch-lite",
+          "brand": "Nintendo",
+          "label": "Nintendo Switch Lite",
+          "aliases": [
+            "\\b(?:nintendo\\s*)?switch\\s*lite\\b"
+          ],
+          "variant_fields": [
+            "hardware_code"
+          ],
+          "attributes": {}
+        },
+        {
+          "id": "nintendo-switch-oled",
+          "brand": "Nintendo",
+          "label": "Nintendo Switch OLED",
+          "aliases": [
+            "\\b(?:nintendo\\s*)?switch\\s*oled\\b"
+          ],
+          "variant_fields": [
+            "hardware_code"
+          ],
+          "attributes": {}
+        }
+      ]
+    },
+    {
+      "id": "lenses",
+      "label": "Camera lenses",
+      "product_type": "objektiivi",
+      "home": "Elektroniikka ja kodinkoneet",
+      "hints": [
+        "\\b(?:objektiivi|camera\\s+lens|nikkor)\\b",
+        "\\b(?:canon\\s+(?:ef|rf)|sony\\s+(?:fe|e))\\s*\\d"
+      ],
+      "comparison_fields": [],
+      "models": [
+        {
+          "id": "canon-ef-50-1.8-stm",
+          "brand": "Canon",
+          "label": "EF 50mm f/1.8 STM",
+          "aliases": [
+            "\\b(?:canon\\s+)?ef\\s*50\\s*mm\\s*f\\s*/?\\s*1[.,]8\\s*stm\\b"
+          ],
+          "variant_fields": [
+            "mount"
+          ],
+          "attributes": {
+            "mount": "canon-ef"
+          }
+        },
+        {
+          "id": "canon-ef-50-1.8-ii",
+          "brand": "Canon",
+          "label": "EF 50mm f/1.8 II",
+          "aliases": [
+            "\\b(?:canon\\s+)?ef\\s*50\\s*mm\\s*f\\s*/?\\s*1[.,]8\\s*ii\\b"
+          ],
+          "variant_fields": [
+            "mount"
+          ],
+          "attributes": {
+            "mount": "canon-ef"
+          }
+        },
+        {
+          "id": "canon-rf-50-1.8-stm",
+          "brand": "Canon",
+          "label": "RF 50mm f/1.8 STM",
+          "aliases": [
+            "\\b(?:canon\\s+)?rf\\s*50\\s*mm\\s*f\\s*/?\\s*1[.,]8\\s*stm\\b"
+          ],
+          "variant_fields": [
+            "mount"
+          ],
+          "attributes": {
+            "mount": "canon-rf"
+          }
+        },
+        {
+          "id": "sony-fe-50-1.8",
+          "brand": "Sony",
+          "label": "FE 50mm f/1.8",
+          "aliases": [
+            "\\bsony\\s+fe\\s*50\\s*mm\\s*f\\s*/?\\s*1[.,]8\\b",
+            "\\bsel50f18f\\b"
+          ],
+          "variant_fields": [
+            "mount"
+          ],
+          "attributes": {
+            "mount": "sony-fe"
+          }
+        }
+      ]
+    }
+  ]
+}

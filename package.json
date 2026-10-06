@@ -1,0 +1,22 @@
+{
+  "name": "toriresearch-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Tori Research dashboard and private Netlify workspace.",
+  "scripts": {
+    "build": "python3 bin/build_netlify.py --mode full --strict",
+    "build:full": "npm run build",
+    "build:basic": "python3 bin/build_netlify.py --mode basic --strict",
+    "test": "node --test tests/js/*.test.js",
+    "lint": "eslint toriresearch/web netlify bin"
+  },
+  "dependencies": {
+    "@netlify/blobs": "11.1.3"
+  },
+  "devDependencies": {
+    "eslint": "9.39.5",
+    "esbuild": "0.25.10",
+    "netlify-cli": "27.10.2"
+  }
+}

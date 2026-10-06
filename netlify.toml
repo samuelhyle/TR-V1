@@ -1,0 +1,95 @@
+[build]
+  # Local, CI and hosted releases all use the explicit strict full build.
+  # Backend selection is separate: TORI_BACKEND chooses blobs or gateway.
+  command = "npm run build"
+  publish = "dist/netlify"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/backend/api/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/healthz"
+  to = "/.netlify/functions/backend/healthz"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/developer"
+  to = "/developer.html"
+  status = 200
+
+[[redirects]]
+  from = "/viewer"
+  to = "/viewer.html"
+  status = 200
+
+[[redirects]]
+  from = "/reader"
+  to = "/reader.html"
+  status = 200
+
+[[redirects]]
+  from = "/seller"
+  to = "/seller.html"
+  status = 200
+
+[[redirects]]
+  from = "/login"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # `style-src` no longer allows inline styles, so the shell's stylesheet and every
+    # `style=` attribute in the markup had to become a real rule -- the build does
+    # that, and `tests/test_netlify_build.py` fails if an inline style survives.
+    #
+    # `style-src-attr` is separate and still allows them, because two renderers
+    # compute a bar's geometry as a percentage at draw time and there is no way to
+    # express that in a stylesheet ahead of the value being known. The two directives
+    # are separated deliberately: an injected `<style>` element is the vector that
+    # takes data off the page -- a rule can probe an attribute value one character at
+    # a time through a background image -- and `style-src 'self'` blocks that. A style
+    # attribute can only set the properties it names, so the residue is contained.
+    # Removing the last of it means emitting bar geometry as CSS custom properties
+    # written through the CSSOM from a post-render pass, not from an HTML string.
+    Content-Security-Policy = "default-src 'none'; script-src 'self'; style-src 'self'; style-src-attr 'unsafe-inline'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'; object-src 'none'"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer"
+    X-Frame-Options = "DENY"
+    X-Robots-Tag = "noindex, nofollow"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Resource-Policy = "same-origin"
+    Cache-Control = "no-store"
+
+# Content-addressed assets, cached for a year and never revalidated.
+#
+# Every published script and stylesheet carries a digest of its own bytes in its
+# name, written by `bin/build_netlify.py`. A URL that contains its content cannot
+# serve old bytes under a new name, which is the only reason an immutable year is
+# safe here rather than a convenience that quietly serves a stale bundle. The
+# previous policy sent `no-store` on every path including these, so the whole shell
+# and script were re-downloaded in full on every page load.
+[[headers]]
+  for = "/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# The HTML shells are small, must not outlive a deploy, and are the only documents
+# that name the current asset digests.
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[functions]
+  node_bundler = "esbuild"

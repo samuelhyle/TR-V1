@@ -1,0 +1,78 @@
+services:
+  - type: web
+    name: tori-research-preview-backend
+    runtime: docker
+    region: frankfurt
+    plan: 2c-4g
+    dockerfilePath: ./Dockerfile.cloud
+    healthCheckPath: /healthz
+    numInstances: 1
+    disk:
+      name: tori-private-state
+      mountPath: /var/lib/tori
+      sizeGB: 20
+    envVars:
+      - key: TORI_PG_DSN
+        fromDatabase:
+          name: tori-research-preview-db
+          property: connectionString
+      - key: TORI_DATA_DIR
+        value: /var/lib/tori/data
+      - key: TORI_REPORTS_DIR
+        value: /var/lib/tori/reports
+      - key: TORI_ENV_FILE
+        value: /var/lib/tori/config/local.env
+      # The permission registry, and specifically *not* `tori_collection.json`.
+      # That file records the operator's confirmation that collection is permitted --
+      # it is the evidence a registry entry is derived from, and it has no `entries`
+      # key at all. Pointing this at it makes `permissions.load()` raise
+      # `PermissionDenied` on every call, so `collection_control.validate()` refuses
+      # discovery, detail and enrichment and collection cannot be configured at all.
+      # The registry is seeded onto the disk by `bin/provision_cloud.py`; the
+      # confirmation file is read by `permissions.import_confirmation()` instead.
+      - key: TORI_PERMISSION_REGISTRY
+        value: /var/lib/tori/data/authorizations/registry.json
+      # Set explicitly rather than left to both sides defaulting to 'default'. The
+      # gateway and the importer must agree on the workspace a membership belongs to,
+      # and relying on two independent defaults agreeing is how a deployment ends up
+      # refusing every account with no explanation.
+      - key: TORI_WORKSPACE_ID
+        value: default
+      # Generated rather than left unset. The gateway refuses to start without one of
+      # at least 48 characters, so `sync: false` meant a blueprint deploy produced a
+      # service that came up and answered every request with "being configured".
+      - key: TORI_GATEWAY_KEY
+        generateValue: true
+      - key: TORI_PUBLIC_ORIGIN
+        value: https://tori-research-preview-70e5059e.netlify.app
+      - key: TORI_PREVIEW_ORIGINS
+        value: https://full-app-preview--tori-research-preview-70e5059e.netlify.app
+      # Keep the service reachable for a shell/SFTP migration on its runtime disk.
+      # Application routes remain unavailable until the imported workspace is ready.
+      - key: TORI_CLOUD_BOOTSTRAP
+        value: "1"
+      - key: TORI_CLOUD_READ_ONLY
+        value: "1"
+      - key: TORI_CLOUD_ANALYTICAL_JOBS
+        value: "1"
+      - key: TORI_MIGRATION_RECEIPT
+        value: /var/lib/tori/migration-receipt.json
+      - key: TORI_CLOUD_COLLECTION_ENABLED
+        value: "0"
+      - key: TORI_COLLECTION_INTERVAL_SECONDS
+        value: "900"
+      # The first milestone reads saved analysis. Enable inference after sizing
+      # and validating a private model service; importing state must not launch AI.
+      - key: TORI_LLM_ENABLED
+        value: "0"
+      - key: TORI_ANALYST_ENABLED
+        value: "0"
+      - key: TORI_LISTING_ANALYSIS_ENABLED
+        value: "0"
+databases:
+  - name: tori-research-preview-db
+    region: frankfurt
+    plan: 0.5c-1g
+    databaseName: toriresearch
+    user: toriresearch
+    ipAllowList: []

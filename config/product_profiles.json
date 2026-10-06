@@ -1,0 +1,1337 @@
+{
+  "version": "product-profiles-v1",
+  "fields": {
+    "manufacturer": {
+      "label": "Manufacturer",
+      "type": "text",
+      "unit": "",
+      "inspection_required": false,
+      "max_length": 80
+    },
+    "model": {
+      "label": "Model",
+      "type": "text",
+      "unit": "",
+      "inspection_required": false,
+      "max_length": 80
+    },
+    "hardware_code": {
+      "label": "Hardware code",
+      "type": "text",
+      "unit": "",
+      "inspection_required": false,
+      "max_length": 80
+    },
+    "colour": {
+      "label": "Colour",
+      "type": "text",
+      "unit": "",
+      "inspection_required": false,
+      "max_length": 80
+    },
+    "quantity": {
+      "label": "Primary units",
+      "type": "integer",
+      "unit": "units",
+      "inspection_required": false,
+      "minimum": 0,
+      "maximum": 1000
+    },
+    "sale_unit": {
+      "label": "Sale unit",
+      "type": "enum",
+      "unit": "",
+      "inspection_required": false,
+      "enum": [
+        "single",
+        "pair",
+        "kit",
+        "lot"
+      ]
+    },
+    "price_basis": {
+      "label": "Asking price basis",
+      "type": "enum",
+      "unit": "",
+      "inspection_required": false,
+      "enum": [
+        "per_unit",
+        "whole_offer"
+      ]
+    },
+    "condition": {
+      "label": "Seller condition",
+      "type": "enum",
+      "unit": "",
+      "inspection_required": false,
+      "enum": [
+        "new_unused",
+        "like_new",
+        "very_good",
+        "good",
+        "fair",
+        "poor",
+        "for_parts",
+        "refurbished"
+      ]
+    },
+    "functionality": {
+      "label": "Seller says it works",
+      "type": "boolean",
+      "unit": "",
+      "inspection_required": true
+    },
+    "defects": {
+      "label": "Disclosed defects",
+      "type": "text",
+      "unit": "",
+      "inspection_required": false,
+      "max_length": 80,
+      "multiple": true
+    },
+    "included_contents": {
+      "label": "Included contents",
+      "type": "text",
+      "unit": "",
+      "inspection_required": false,
+      "max_length": 80,
+      "multiple": true
+    },
+    "missing_contents": {
+      "label": "Missing contents",
+      "type": "text",
+      "unit": "",
+      "inspection_required": false,
+      "max_length": 80,
+      "multiple": true
+    },
+    "compatible_model": {
+      "label": "Compatible model",
+      "type": "text",
+      "unit": "",
+      "inspection_required": false,
+      "max_length": 80
+    },
+    "repair_history": {
+      "label": "Repair history stated",
+      "type": "text",
+      "unit": "",
+      "inspection_required": false,
+      "max_length": 80
+    },
+    "storage_gb": {
+      "label": "Internal storage",
+      "type": "number",
+      "unit": "GB",
+      "inspection_required": false,
+      "minimum": 0,
+      "maximum": 10000000
+    },
+    "ram_gb": {
+      "label": "RAM",
+      "type": "number",
+      "unit": "GB",
+      "inspection_required": false,
+      "minimum": 0,
+      "maximum": 8192
+    },
+    "ram_type": {
+      "label": "RAM type",
+      "type": "text",
+      "unit": "",
+      "inspection_required": false,
+      "max_length": 80
+    },
+    "battery_health_pct": {
+      "label": "Battery health",
+      "type": "number",
+      "unit": "%",
+      "inspection_required": true,
+      "minimum": 0,
+      "maximum": 100
+    },
+    "battery_cycles": {
+      "label": "Battery cycles",
+      "type": "integer",
+      "unit": "cycles",
+      "inspection_required": false,
+      "minimum": 0,
+      "maximum": 10000000
+    },
+    "battery_wh": {
+      "label": "Battery capacity",
+      "type": "number",
+      "unit": "Wh",
+      "inspection_required": false,
+      "minimum": 0,
+      "maximum": 10000000
+    },
+    "battery_ah": {
+      "label": "Battery capacity",
+      "type": "number",
+      "unit": "Ah",
+      "inspection_required": false,
+      "minimum": 0,
+      "maximum": 10000000
+    },
+    "battery_voltage": {
+      "label": "Battery voltage",
+      "type": "number",
+      "unit": "V",
+      "inspection_required": false,
+      "minimum": 0,
+      "maximum": 10000000
+    },
+    "activation_lock": {
+      "label": "Account or activation lock present",
+      "type": "boolean",
+      "unit": "",
+      "inspection_required": true
+    },
+    "carrier_lock": {
+      "label": "Carrier lock present",
+      "type": "boolean",
+      "unit": "",
+      "inspection_required": true
+    },
+    "charger_included": {
+      "label": "Charger included",
+      "type": "boolean",
+      "unit": "",
+      "inspection_required": false
+    },
+    "battery_included": {
+      "label": "Battery included",
+      "type": "boolean",
+      "unit": "",
+      "inspection_required": false
+    },
+    "cellular_variant": {
+      "label": "Connectivity variant",
+      "type": "text",
+      "unit": "",
+      "inspection_required": false,
+      "max_length": 80
+    },
+    "cpu": {
+      "label": "CPU",
+      "type": "text",
+      "unit": "",
+      "inspection_required": false,
+      "max_length": 80
+    },
+    "gpu": {
+      "label": "GPU",
+      "type": "text",
+      "unit": "",
+      "inspection_required": false,
+      "max_length": 80
+    },
+    "vram_gb": {
+      "label": "Graphics memory",
+      "type": "number",
+      "unit": "GB",
+      "inspection_required": false,
+      "minimum": 0,
+      "maximum": 8192
+    },
+    "storage_type": {
+      "label": "Storage type",
+      "type": "enum",
+      "unit": "",
+      "inspection_required": false,
+      "enum": [
+        "ssd",
+        "hdd",
+        "emmc",
+        "mixed"
+      ]
+    },
+    "drive_count": {
+      "label": "Drives",
+      "type": "integer",
+      "unit": "units",
+      "inspection_required": false,
+      "minimum": 0,
+      "maximum": 10000000
+    },
+    "screen_inches": {
+      "label": "Screen size",
+      "type": "number",
+      "unit": "in",
+      "inspection_required": false,
+      "minimum": 0,
+      "maximum": 200
+    },
+    "resolution": {
+      "label": "Resolution",
+      "type": "text",
+      "unit": "",
+      "inspection_required": false,
+      "max_length": 80
+    },
+    "keyboard_layout": {
+      "label": "Keyboard layout",
+      "type": "text",
+      "unit": "",
+      "inspection_required": false,
+      "max_length": 80
+    },
+    "os": {
+      "label": "Operating system claim",
+      "type": "text",
+      "unit": "",
+      "inspection_required": false,
+      "max_length": 80
+    },
+    "sensor_format": {
+      "label": "Sensor format",
+      "type": "text",
+      "unit": "",
+      "inspection_required": false,
+      "max_length": 80
+    },
+    "shutter_count": {
+      "label": "Shutter count",
+      "type": "integer",
+      "unit": "actuations",
+      "inspection_required": false,
+      "minimum": 0,
+      "maximum": 10000000
+    },
+    "mount": {
+      "label": "Lens mount",
+      "type": "text",
+      "unit": "",
+      "inspection_required": false,
+      "max_length": 80
+    },
+    "focal_length_mm": {
+      "label": "Focal length",
+      "type": "text",
+      "unit": "mm",
+      "inspection_required": false,
+      "max_length": 80
+    },
+    "max_aperture": {
+      "label": "Maximum aperture",
+      "type": "number",
+      "unit": "f",
+      "inspection_required": false,
+      "minimum": 0,
+      "maximum": 100
+    },
+    "stabilization": {
+      "label": "Stabilization",
+      "type": "boolean",
+      "unit": "",
+      "inspection_required": false
+    },
+    "optical_fungus": {
+      "label": "Lens fungus disclosed",
+      "type": "boolean",
+      "unit": "",
+      "inspection_required": false
+    },
+    "edition": {
+      "label": "Edition",
+      "type": "enum",
+      "unit": "",
+      "inspection_required": false,
+      "enum": [
+        "disc",
+        "digital"
+      ]
+    },
+    "controller_count": {
+      "label": "Controllers included",
+      "type": "integer",
+      "unit": "units",
+      "inspection_required": false,
+      "minimum": 0,
+      "maximum": 10000000
+    },
+    "game_platform": {
+      "label": "Game platform",
+      "type": "text",
+      "unit": "",
+      "inspection_required": false,
+      "max_length": 80
+    },
+    "media_type": {
+      "label": "Media type",
+      "type": "enum",
+      "unit": "",
+      "inspection_required": false,
+      "enum": [
+        "physical",
+        "digital"
+      ]
+    },
+    "connectivity": {
+      "label": "Connectivity",
+      "type": "text",
+      "unit": "",
+      "inspection_required": false,
+      "max_length": 80
+    },
+    "speaker_configuration": {
+      "label": "Speaker configuration",
+      "type": "text",
+      "unit": "",
+      "inspection_required": false,
+      "max_length": 80
+    },
+    "channels": {
+      "label": "Channels",
+      "type": "number",
+      "unit": "channels",
+      "inspection_required": false,
+      "minimum": 0,
+      "maximum": 10000000
+    },
+    "power_w": {
+      "label": "Stated power",
+      "type": "number",
+      "unit": "W",
+      "inspection_required": false,
+      "minimum": 0,
+      "maximum": 10000000
+    },
+    "power_basis": {
+      "label": "Power specification basis",
+      "type": "text",
+      "unit": "",
+      "inspection_required": false,
+      "max_length": 80
+    },
+    "panel_type": {
+      "label": "Panel type",
+      "type": "text",
+      "unit": "",
+      "inspection_required": false,
+      "max_length": 80
+    },
+    "operating_hours": {
+      "label": "Operating hours",
+      "type": "integer",
+      "unit": "hours",
+      "inspection_required": false,
+      "minimum": 0,
+      "maximum": 10000000
+    },
+    "burn_in": {
+      "label": "Burn-in disclosed",
+      "type": "boolean",
+      "unit": "",
+      "inspection_required": false
+    },
+    "charging_case_included": {
+      "label": "Charging case included",
+      "type": "boolean",
+      "unit": "",
+      "inspection_required": false
+    },
+    "remote_included": {
+      "label": "Remote included",
+      "type": "boolean",
+      "unit": "",
+      "inspection_required": false
+    },
+    "bicycle_type": {
+      "label": "Bicycle type",
+      "type": "text",
+      "unit": "",
+      "inspection_required": false,
+      "max_length": 80
+    },
+    "frame_size": {
+      "label": "Frame size with unit",
+      "type": "text",
+      "unit": "",
+      "inspection_required": false,
+      "max_length": 80
+    },
+    "wheel_inches": {
+      "label": "Wheel size",
+      "type": "number",
+      "unit": "in",
+      "inspection_required": false,
+      "minimum": 0,
+      "maximum": 100
+    },
+    "frame_material": {
+      "label": "Frame material",
+      "type": "text",
+      "unit": "",
+      "inspection_required": false,
+      "max_length": 80
+    },
+    "gears": {
+      "label": "Gears",
+      "type": "integer",
+      "unit": "gears",
+      "inspection_required": false,
+      "minimum": 0,
+      "maximum": 10000000
+    },
+    "drivetrain": {
+      "label": "Drivetrain",
+      "type": "text",
+      "unit": "",
+      "inspection_required": false,
+      "max_length": 80
+    },
+    "suspension": {
+      "label": "Suspension",
+      "type": "text",
+      "unit": "",
+      "inspection_required": false,
+      "max_length": 80
+    },
+    "motor": {
+      "label": "Motor",
+      "type": "text",
+      "unit": "",
+      "inspection_required": false,
+      "max_length": 80
+    },
+    "mileage_km": {
+      "label": "Mileage",
+      "type": "number",
+      "unit": "km",
+      "inspection_required": false,
+      "minimum": 0,
+      "maximum": 10000000
+    },
+    "range_km": {
+      "label": "Seller-stated range",
+      "type": "number",
+      "unit": "km",
+      "inspection_required": false,
+      "minimum": 0,
+      "maximum": 10000000
+    },
+    "foldable": {
+      "label": "Foldable",
+      "type": "boolean",
+      "unit": "",
+      "inspection_required": false
+    },
+    "connector": {
+      "label": "Connector",
+      "type": "text",
+      "unit": "",
+      "inspection_required": false,
+      "max_length": 80
+    },
+    "dimensions": {
+      "label": "Dimensions",
+      "type": "text",
+      "unit": "",
+      "inspection_required": false,
+      "max_length": 80
+    },
+    "material": {
+      "label": "Material",
+      "type": "text",
+      "unit": "",
+      "inspection_required": false,
+      "max_length": 80
+    }
+  },
+  "profiles": {
+    "phone": {
+      "label": "Phone",
+      "family": "phones",
+      "product_type": "puhelin",
+      "fields": [
+        "manufacturer",
+        "model",
+        "hardware_code",
+        "colour",
+        "quantity",
+        "sale_unit",
+        "price_basis",
+        "condition",
+        "functionality",
+        "defects",
+        "included_contents",
+        "missing_contents",
+        "compatible_model",
+        "repair_history",
+        "storage_gb",
+        "ram_gb",
+        "battery_health_pct",
+        "battery_cycles",
+        "activation_lock",
+        "carrier_lock",
+        "charger_included",
+        "cellular_variant"
+      ],
+      "hints": [
+        "\\b(?:iphone|galaxy|pixel|oneplus|puhel(?:in|inta|imia|imet|imeen|imelle)|smartphone|telefon)\\b"
+      ],
+      "comparison_required": [
+        "manufacturer",
+        "model",
+        "storage_gb"
+      ],
+      "automatic_comparison_promoted": false
+    },
+    "tablet": {
+      "label": "Tablet",
+      "family": "phones",
+      "product_type": "tabletti",
+      "fields": [
+        "manufacturer",
+        "model",
+        "hardware_code",
+        "colour",
+        "quantity",
+        "sale_unit",
+        "price_basis",
+        "condition",
+        "functionality",
+        "defects",
+        "included_contents",
+        "missing_contents",
+        "compatible_model",
+        "repair_history",
+        "storage_gb",
+        "ram_gb",
+        "battery_health_pct",
+        "battery_cycles",
+        "activation_lock",
+        "carrier_lock",
+        "charger_included",
+        "cellular_variant"
+      ],
+      "hints": [
+        "\\b(?:ipad|tabletti|tablet)\\b"
+      ],
+      "comparison_required": [
+        "manufacturer",
+        "model",
+        "storage_gb",
+        "cellular_variant"
+      ],
+      "automatic_comparison_promoted": false
+    },
+    "laptop": {
+      "label": "Laptop",
+      "family": "computing",
+      "product_type": "kannettava_tietokone",
+      "fields": [
+        "manufacturer",
+        "model",
+        "hardware_code",
+        "colour",
+        "quantity",
+        "sale_unit",
+        "price_basis",
+        "condition",
+        "functionality",
+        "defects",
+        "included_contents",
+        "missing_contents",
+        "compatible_model",
+        "repair_history",
+        "cpu",
+        "ram_gb",
+        "ram_type",
+        "storage_gb",
+        "storage_type",
+        "drive_count",
+        "gpu",
+        "vram_gb",
+        "screen_inches",
+        "resolution",
+        "battery_health_pct",
+        "battery_cycles",
+        "keyboard_layout",
+        "os",
+        "charger_included",
+        "activation_lock"
+      ],
+      "hints": [
+        "\\b(?:macbook|thinkpad|laptop|kannettava|chromebook)\\b"
+      ],
+      "comparison_required": [
+        "manufacturer",
+        "model",
+        "cpu",
+        "ram_gb",
+        "storage_gb"
+      ],
+      "automatic_comparison_promoted": false
+    },
+    "desktop": {
+      "label": "Desktop computer",
+      "family": "computing",
+      "product_type": "tietokone",
+      "fields": [
+        "manufacturer",
+        "model",
+        "hardware_code",
+        "colour",
+        "quantity",
+        "sale_unit",
+        "price_basis",
+        "condition",
+        "functionality",
+        "defects",
+        "included_contents",
+        "missing_contents",
+        "compatible_model",
+        "repair_history",
+        "cpu",
+        "ram_gb",
+        "ram_type",
+        "storage_gb",
+        "storage_type",
+        "drive_count",
+        "gpu",
+        "vram_gb",
+        "screen_inches",
+        "resolution",
+        "battery_health_pct",
+        "battery_cycles",
+        "keyboard_layout",
+        "os",
+        "charger_included",
+        "activation_lock"
+      ],
+      "hints": [
+        "\\b(?:pöytäkone|tietokone|desktop|imac|gaming\\s*pc)\\b"
+      ],
+      "comparison_required": [
+        "manufacturer",
+        "model",
+        "cpu",
+        "ram_gb",
+        "storage_gb",
+        "gpu"
+      ],
+      "automatic_comparison_promoted": false
+    },
+    "component": {
+      "label": "Computer component",
+      "family": "computing",
+      "product_type": "unknown",
+      "fields": [
+        "manufacturer",
+        "model",
+        "hardware_code",
+        "colour",
+        "quantity",
+        "sale_unit",
+        "price_basis",
+        "condition",
+        "functionality",
+        "defects",
+        "included_contents",
+        "missing_contents",
+        "compatible_model",
+        "repair_history",
+        "cpu",
+        "ram_gb",
+        "ram_type",
+        "storage_gb",
+        "storage_type",
+        "drive_count",
+        "gpu",
+        "vram_gb",
+        "screen_inches",
+        "resolution",
+        "battery_health_pct",
+        "battery_cycles",
+        "keyboard_layout",
+        "os",
+        "charger_included",
+        "activation_lock"
+      ],
+      "hints": [
+        "\\b(?:näytönohjain|graphics\\s*card|motherboard|emolevy|prosessor[iy]|ddr[345])\\b"
+      ],
+      "comparison_required": [],
+      "automatic_comparison_promoted": false
+    },
+    "camera": {
+      "label": "Camera body",
+      "family": "photography",
+      "product_type": "kamera",
+      "fields": [
+        "manufacturer",
+        "model",
+        "hardware_code",
+        "colour",
+        "quantity",
+        "sale_unit",
+        "price_basis",
+        "condition",
+        "functionality",
+        "defects",
+        "included_contents",
+        "missing_contents",
+        "compatible_model",
+        "repair_history",
+        "sensor_format",
+        "shutter_count",
+        "battery_included",
+        "charger_included",
+        "mount",
+        "stabilization"
+      ],
+      "hints": [
+        "\\b(?:kamera|camera|eos|alpha)\\b"
+      ],
+      "comparison_required": [
+        "manufacturer",
+        "model"
+      ],
+      "automatic_comparison_promoted": false
+    },
+    "lens": {
+      "label": "Camera lens",
+      "family": "photography",
+      "product_type": "objektiivi",
+      "fields": [
+        "manufacturer",
+        "model",
+        "hardware_code",
+        "colour",
+        "quantity",
+        "sale_unit",
+        "price_basis",
+        "condition",
+        "functionality",
+        "defects",
+        "included_contents",
+        "missing_contents",
+        "compatible_model",
+        "repair_history",
+        "mount",
+        "focal_length_mm",
+        "max_aperture",
+        "stabilization",
+        "optical_fungus"
+      ],
+      "hints": [
+        "\\b(?:objektiivi|lens|nikkor|canon\\s+(?:ef|rf)|sony\\s+fe)\\b"
+      ],
+      "comparison_required": [
+        "manufacturer",
+        "model",
+        "mount"
+      ],
+      "automatic_comparison_promoted": false
+    },
+    "camera_kit": {
+      "label": "Camera kit",
+      "family": "photography",
+      "product_type": "kamera",
+      "fields": [
+        "manufacturer",
+        "model",
+        "hardware_code",
+        "colour",
+        "quantity",
+        "sale_unit",
+        "price_basis",
+        "condition",
+        "functionality",
+        "defects",
+        "included_contents",
+        "missing_contents",
+        "compatible_model",
+        "repair_history",
+        "sensor_format",
+        "shutter_count",
+        "mount",
+        "focal_length_mm",
+        "max_aperture",
+        "battery_included",
+        "charger_included"
+      ],
+      "hints": [
+        "\\b(?:camera\\s*kit|kamerapaketti)\\b"
+      ],
+      "comparison_required": [],
+      "automatic_comparison_promoted": false
+    },
+    "console": {
+      "label": "Game console",
+      "family": "gaming",
+      "product_type": "pelikonsoli",
+      "fields": [
+        "manufacturer",
+        "model",
+        "hardware_code",
+        "colour",
+        "quantity",
+        "sale_unit",
+        "price_basis",
+        "condition",
+        "functionality",
+        "defects",
+        "included_contents",
+        "missing_contents",
+        "compatible_model",
+        "repair_history",
+        "storage_gb",
+        "edition",
+        "controller_count",
+        "charger_included",
+        "activation_lock"
+      ],
+      "hints": [
+        "\\b(?:ps[345]|playstation|xbox|nintendo\\s*switch|pelikonsoli)\\b"
+      ],
+      "comparison_required": [
+        "manufacturer",
+        "model",
+        "edition"
+      ],
+      "automatic_comparison_promoted": false
+    },
+    "game": {
+      "label": "Video game",
+      "family": "gaming",
+      "product_type": "unknown",
+      "fields": [
+        "manufacturer",
+        "model",
+        "hardware_code",
+        "colour",
+        "quantity",
+        "sale_unit",
+        "price_basis",
+        "condition",
+        "functionality",
+        "defects",
+        "included_contents",
+        "missing_contents",
+        "compatible_model",
+        "repair_history",
+        "game_platform",
+        "media_type",
+        "edition"
+      ],
+      "hints": [
+        "\\b(?:videopeli|video\\s*game|ps[345]\\s*peli|switch\\s*peli)\\b"
+      ],
+      "comparison_required": [],
+      "automatic_comparison_promoted": false
+    },
+    "controller": {
+      "label": "Game controller",
+      "family": "gaming",
+      "product_type": "unknown",
+      "fields": [
+        "manufacturer",
+        "model",
+        "hardware_code",
+        "colour",
+        "quantity",
+        "sale_unit",
+        "price_basis",
+        "condition",
+        "functionality",
+        "defects",
+        "included_contents",
+        "missing_contents",
+        "compatible_model",
+        "repair_history",
+        "game_platform",
+        "connectivity"
+      ],
+      "hints": [
+        "\\b(?:ohjain|controller|dualshock|dualsense|joy.?con)\\b"
+      ],
+      "comparison_required": [],
+      "automatic_comparison_promoted": false
+    },
+    "headphones": {
+      "label": "Headphones",
+      "family": "audio_video",
+      "product_type": "kuulokkeet",
+      "fields": [
+        "manufacturer",
+        "model",
+        "hardware_code",
+        "colour",
+        "quantity",
+        "sale_unit",
+        "price_basis",
+        "condition",
+        "functionality",
+        "defects",
+        "included_contents",
+        "missing_contents",
+        "compatible_model",
+        "repair_history",
+        "connectivity",
+        "charging_case_included",
+        "charger_included"
+      ],
+      "hints": [
+        "\\b(?:kuulokkeet|headphones|airpods|earbuds)\\b"
+      ],
+      "comparison_required": [],
+      "automatic_comparison_promoted": false
+    },
+    "speakers": {
+      "label": "Speakers",
+      "family": "audio_video",
+      "product_type": "kaiuttimet",
+      "fields": [
+        "manufacturer",
+        "model",
+        "hardware_code",
+        "colour",
+        "quantity",
+        "sale_unit",
+        "price_basis",
+        "condition",
+        "functionality",
+        "defects",
+        "included_contents",
+        "missing_contents",
+        "compatible_model",
+        "repair_history",
+        "connectivity",
+        "speaker_configuration",
+        "channels",
+        "power_w",
+        "power_basis"
+      ],
+      "hints": [
+        "\\b(?:kaiutin|kaiuttimet|speakers?)\\b"
+      ],
+      "comparison_required": [],
+      "automatic_comparison_promoted": false
+    },
+    "receiver": {
+      "label": "Audio receiver",
+      "family": "audio_video",
+      "product_type": "unknown",
+      "fields": [
+        "manufacturer",
+        "model",
+        "hardware_code",
+        "colour",
+        "quantity",
+        "sale_unit",
+        "price_basis",
+        "condition",
+        "functionality",
+        "defects",
+        "included_contents",
+        "missing_contents",
+        "compatible_model",
+        "repair_history",
+        "connectivity",
+        "channels",
+        "power_w",
+        "power_basis",
+        "remote_included"
+      ],
+      "hints": [
+        "\\b(?:vahvistin|receiver|amplifier)\\b"
+      ],
+      "comparison_required": [],
+      "automatic_comparison_promoted": false
+    },
+    "television": {
+      "label": "Television",
+      "family": "audio_video",
+      "product_type": "television",
+      "fields": [
+        "manufacturer",
+        "model",
+        "hardware_code",
+        "colour",
+        "quantity",
+        "sale_unit",
+        "price_basis",
+        "condition",
+        "functionality",
+        "defects",
+        "included_contents",
+        "missing_contents",
+        "compatible_model",
+        "repair_history",
+        "screen_inches",
+        "resolution",
+        "panel_type",
+        "burn_in",
+        "remote_included"
+      ],
+      "hints": [
+        "\\b(?:televisio|television|tv|oled|qled)\\b"
+      ],
+      "comparison_required": [],
+      "automatic_comparison_promoted": false
+    },
+    "projector": {
+      "label": "Projector",
+      "family": "audio_video",
+      "product_type": "unknown",
+      "fields": [
+        "manufacturer",
+        "model",
+        "hardware_code",
+        "colour",
+        "quantity",
+        "sale_unit",
+        "price_basis",
+        "condition",
+        "functionality",
+        "defects",
+        "included_contents",
+        "missing_contents",
+        "compatible_model",
+        "repair_history",
+        "resolution",
+        "operating_hours",
+        "remote_included"
+      ],
+      "hints": [
+        "\\b(?:projektori|projector)\\b"
+      ],
+      "comparison_required": [],
+      "automatic_comparison_promoted": false
+    },
+    "bicycle": {
+      "label": "Bicycle",
+      "family": "cycling",
+      "product_type": "polkupyora",
+      "fields": [
+        "manufacturer",
+        "model",
+        "hardware_code",
+        "colour",
+        "quantity",
+        "sale_unit",
+        "price_basis",
+        "condition",
+        "functionality",
+        "defects",
+        "included_contents",
+        "missing_contents",
+        "compatible_model",
+        "repair_history",
+        "bicycle_type",
+        "frame_size",
+        "wheel_inches",
+        "frame_material",
+        "gears",
+        "drivetrain",
+        "suspension"
+      ],
+      "hints": [
+        "\\b(?:polkupyörä(?:ä|än|n|lle)?|pyörä(?:ä|än)?|bicycle|bike|cykel)\\b"
+      ],
+      "comparison_required": [
+        "manufacturer",
+        "model",
+        "bicycle_type",
+        "frame_size"
+      ],
+      "automatic_comparison_promoted": false
+    },
+    "ebike": {
+      "label": "Electric bicycle",
+      "family": "cycling",
+      "product_type": "sähköpyora",
+      "fields": [
+        "manufacturer",
+        "model",
+        "hardware_code",
+        "colour",
+        "quantity",
+        "sale_unit",
+        "price_basis",
+        "condition",
+        "functionality",
+        "defects",
+        "included_contents",
+        "missing_contents",
+        "compatible_model",
+        "repair_history",
+        "bicycle_type",
+        "frame_size",
+        "wheel_inches",
+        "frame_material",
+        "gears",
+        "drivetrain",
+        "suspension",
+        "motor",
+        "power_w",
+        "battery_wh",
+        "mileage_km",
+        "battery_included",
+        "charger_included",
+        "range_km"
+      ],
+      "hints": [
+        "\\b(?:sähköpyörä|e.?bike|electric\\s*bike|elcykel)\\b"
+      ],
+      "comparison_required": [],
+      "automatic_comparison_promoted": false
+    },
+    "kick_scooter": {
+      "label": "Kick scooter",
+      "family": "scooters",
+      "product_type": "potkulauta",
+      "fields": [
+        "manufacturer",
+        "model",
+        "hardware_code",
+        "colour",
+        "quantity",
+        "sale_unit",
+        "price_basis",
+        "condition",
+        "functionality",
+        "defects",
+        "included_contents",
+        "missing_contents",
+        "compatible_model",
+        "repair_history",
+        "wheel_inches",
+        "foldable"
+      ],
+      "hints": [
+        "\\b(?:potkulauta|kick\\s*scooter|sparkcykel)\\b"
+      ],
+      "comparison_required": [],
+      "automatic_comparison_promoted": false
+    },
+    "electric_scooter": {
+      "label": "Electric scooter",
+      "family": "scooters",
+      "product_type": "sähköpotkulauta",
+      "fields": [
+        "manufacturer",
+        "model",
+        "hardware_code",
+        "colour",
+        "quantity",
+        "sale_unit",
+        "price_basis",
+        "condition",
+        "functionality",
+        "defects",
+        "included_contents",
+        "missing_contents",
+        "compatible_model",
+        "repair_history",
+        "power_w",
+        "power_basis",
+        "battery_wh",
+        "battery_ah",
+        "battery_voltage",
+        "range_km",
+        "mileage_km",
+        "wheel_inches",
+        "foldable",
+        "charger_included",
+        "activation_lock"
+      ],
+      "hints": [
+        "\\b(?:sähköpotkulauta|electric\\s*scooter|elsparkcykel)\\b"
+      ],
+      "comparison_required": [],
+      "automatic_comparison_promoted": false
+    },
+    "accessory": {
+      "label": "Accessory",
+      "family": "accessories",
+      "product_type": "unknown",
+      "fields": [
+        "manufacturer",
+        "model",
+        "hardware_code",
+        "colour",
+        "quantity",
+        "sale_unit",
+        "price_basis",
+        "condition",
+        "functionality",
+        "defects",
+        "included_contents",
+        "missing_contents",
+        "compatible_model",
+        "repair_history",
+        "connector",
+        "dimensions",
+        "material"
+      ],
+      "hints": [
+        "\\b(?:suojakuori|kuori|case|kotelo|linssinsuojus|lens\\s*cap|ear\\s*pads|laturi|charger)\\b"
+      ],
+      "comparison_required": [],
+      "automatic_comparison_promoted": false
+    },
+    "part": {
+      "label": "Replacement part",
+      "family": "accessories",
+      "product_type": "unknown",
+      "fields": [
+        "manufacturer",
+        "model",
+        "hardware_code",
+        "colour",
+        "quantity",
+        "sale_unit",
+        "price_basis",
+        "condition",
+        "functionality",
+        "defects",
+        "included_contents",
+        "missing_contents",
+        "compatible_model",
+        "repair_history",
+        "connector",
+        "dimensions",
+        "material",
+        "battery_wh",
+        "power_w",
+        "wheel_inches",
+        "battery_ah",
+        "battery_voltage"
+      ],
+      "hints": [
+        "\\b(?:ulkorengas|sisärengas|rengas|tyre|tire|replacement|varaosa|battery\\s*for)\\b"
+      ],
+      "comparison_required": [],
+      "automatic_comparison_promoted": false
+    },
+    "unknown": {
+      "label": "Unresolved product",
+      "family": "unknown",
+      "product_type": "unknown",
+      "fields": [
+        "manufacturer",
+        "model",
+        "hardware_code",
+        "colour",
+        "quantity",
+        "sale_unit",
+        "price_basis",
+        "condition",
+        "functionality",
+        "defects",
+        "included_contents",
+        "missing_contents",
+        "compatible_model",
+        "repair_history"
+      ],
+      "hints": [],
+      "comparison_required": [],
+      "automatic_comparison_promoted": false
+    }
+  }
+}

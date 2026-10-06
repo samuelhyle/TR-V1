@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  TEMPLATE. The __REPO__ placeholders are substituted by
+  bin/install_scheduler.py at install time.
+
+  Do not hand-edit the installed copy in ~/Library/LaunchAgents: it will be
+  overwritten and the paths in it will go stale the moment the checkout moves.
+-->
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.toriresearch.collect</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>__REPO__/bin/collect.sh</string>
+  </array>
+  <key>WorkingDirectory</key><string>__REPO__</string>
+  <key>StartCalendarInterval</key><dict><key>Minute</key><integer>0</integer></dict>
+  <key>RunAtLoad</key><false/>
+  <key>EnvironmentVariables</key><dict><key>TORI_RUN_ORIGIN</key><string>scheduled</string></dict>
+  <key>StandardOutPath</key><string>__REPO__/data/launchd.out.log</string>
+  <key>StandardErrorPath</key><string>__REPO__/data/launchd.err.log</string>
+</dict>
+</plist>

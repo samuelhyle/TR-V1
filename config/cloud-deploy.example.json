@@ -1,0 +1,13 @@
+{
+  "site_id": "c477fb54-16aa-4d90-b86f-7405e1bca93d",
+  "backend_url": "https://REPLACE_WITH_STAGING_BACKEND",
+  "gateway_key": "REPLACE_WITH_A_PRIVATE_KEY_OF_AT_LEAST_48_CHARACTERS",
+  "preview_origin": "https://full-app-preview--tori-research-preview-70e5059e.netlify.app",
+  "production_origin": "https://tori-research-preview-70e5059e.netlify.app",
+  "read_only": true,
+  "analytical_jobs": true,
+  "smoke_account": {
+    "username": "deployment-check",
+    "password": "REPLACE_WITH_ITS_PRIVATE_PERSONAL_PASSWORD"
+  }
+}

@@ -1,0 +1,14 @@
+FROM python:3.12-slim@sha256:f77ac9e44ae96ef2c90b8053ea08c31f8be030f824196b0ae4db6d462c84e51f
+ARG TORI_RELEASE_REVISION=unknown
+ENV TORI_RELEASE_REVISION=$TORI_RELEASE_REVISION
+ENV PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/app
+WORKDIR /app
+RUN apt-get update && apt-get install -y --no-install-recommends socat \
+    && rm -rf /var/lib/apt/lists/*
+COPY requirements-predict.txt requirements-cloud.txt requirements-cloud.constraints.txt /app/
+RUN pip install --no-cache-dir -r requirements-cloud.txt
+COPY toriresearch /app/toriresearch
+COPY legal /app/legal
+COPY config/vocabulary.yaml config/product_identity.json config/product_profiles.json /app/config/
+COPY bin /app/bin
+CMD ["python", "-m", "toriresearch.cloud_runtime"]

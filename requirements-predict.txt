@@ -1,0 +1,8 @@
+# Optional research models; the collector and ordinary reports remain stdlib-only.
+numpy>=1.24,<3
+pandas>=2.0,<3
+scipy>=1.10,<2
+lifelines>=0.30,<0.31
+scikit-learn>=1.3,<2
+statsmodels>=0.14,<0.15
+ruptures>=1.1.9,<2
